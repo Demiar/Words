@@ -17,20 +17,15 @@ function ssplit($someWord){
 }
 $myWordArray = ssplit($myWord);
 function arra($dbWord, $myWordArray){
+	$result = array();
 	foreach ($dbWord as $key => $value) {
 		$aabb = implode("", $value);
-		//var_dump($aabb);
 		$dbWordArray = array();
 		$dbWordArray = str_split($aabb, 2);
-		//var_dump($dbWordArray);
 		$keys = array_search($dbWordArray, $myWordArray);
-		//var_dump($dbWordArray);
-		var_dump($myWordArray[$key]);
 		unset($myWordArray[$keys]);
 		unset($dbWordArray[$key]);
-		//var_dump($dbWordArray);
 		if (count($dbWordArray) == 0) {
-			var_dump($aabb);
 			
 		}
 	}	
